@@ -212,7 +212,14 @@ aside {
 	-moz-user-select: none;     /* Firefox 43+ */
 	-ms-user-select: none;      /* No support yet */
 	user-select: none;          /* Likely future */  
+	animation: fadeIn 3s;
+	background-attachment: fixed;
 }
+
+@keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+  }
 
 .wallpaper h1 {
 	padding: 1vw 4vw;
