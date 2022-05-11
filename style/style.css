@@ -272,7 +272,7 @@ aside {
 }
 
 .img_a_propos {
-	background-image: url("../img/web-development.png");
+	background-image: url("../img/web-dev.svg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -319,7 +319,7 @@ aside {
 }
 
 .etudes .img_etudes {
-	background-image: url("../img/etudes.png");
+	background-image: url("../img/etudes.svg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
