@@ -607,6 +607,7 @@ footer ul {
 		flex-direction: column;
 		justify-content: center;
 		height: fit-content;
+		padding: 1em;
 	}
 	
 	.txt_a_propos {
@@ -730,7 +731,7 @@ footer ul {
 	}
 
 	.competences .tableau_competences .content .skillsBox {
-		padding: 20px 20px;
+		padding: 0;
 	}
 
 	footer {
@@ -741,10 +742,6 @@ footer ul {
 		font-size: 15px;
 	}
 
-	.esl h2 {
-		padding: 0 2em
-	}
-
 	.liste_experiences p {
 		width: 70%;
 		margin: auto;
@@ -752,5 +749,13 @@ footer ul {
 	
 	.experiences .geoboat {
 		min-height: auto;
+	}
+
+	.experiences {
+		padding: 0;
+	}
+
+	.competences .tableau_competences .content .skillsBox img {
+		width: 10em;
 	}
 }
