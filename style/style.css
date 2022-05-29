@@ -187,6 +187,9 @@ header li {
 
 a:link {
 	color: unset;
+	background-image: none;
+	background-color: none;
+	border-radius: 20px;
 }
 
 a:visited {
@@ -195,7 +198,6 @@ a:visited {
 
 a.fleche:hover {
 	opacity: 1;
-	font-size: 70px;
 	color: #fff;
 	background-color: unset;
 	transition: 0.4s;
@@ -388,12 +390,28 @@ aside {
 
 .wallpaper .fleche {
 	font-size: 60px;
+	text-align: center;
 	opacity: 0.8;
 	top: 80%;
 	left: 50%;
 	position: absolute;
 	transform: translate(-50%, -50%);
 	text-shadow: none;
+	animation: go-down ease infinite 2s;
+}
+
+@keyframes go-down {
+	0% {
+		opacity: 0;
+		transform: translateY(0);
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
 }
 
 .a_propos {
