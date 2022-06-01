@@ -50,6 +50,11 @@ html {
 	background-color: #333;
 	display: flex;
 	flex-direction: column;
+	overflow-x: hidden;
+}
+
+.btn_list {
+	display: none;
 }
 
 strong {
@@ -391,13 +396,12 @@ aside {
 .wallpaper .fleche {
 	font-size: 60px;
 	text-align: center;
+	left: 0;
+	width: 100%;
 	opacity: 0.8;
 	top: 80%;
-	left: 50%;
 	position: absolute;
-	transform: translate(-50%, -50%);
-	text-shadow: none;
-	animation: go-down ease infinite 2s;
+	animation: go-down linear infinite 2s;
 }
 
 @keyframes go-down {
@@ -621,8 +625,8 @@ footer ul {
 }
 
 .reveal.appear {
-	transform: translateX(0);
 	opacity: 1;
+	transform: translateX(0);
 }
 
 
@@ -631,24 +635,92 @@ footer ul {
 
 @media screen and (max-width: 1400px) {
 
+	/* Menu pour mobile */
+
+	.btn_list {
+		position: fixed;
+		z-index: 99;
+		display: flex;
+		box-shadow: 0 0 10px 5px #222;
+		flex-direction: row;
+		height: 6em;
+		width: 100%;
+		justify-content: space-around;
+		align-items: center;
+		padding: 0;
+		min-height: 0;
+		background: #333;
+		bottom: 0;
+	}
+
+	.btn_list .little_btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 60%;
+		aspect-ratio: 1/1;
+		font-size: 1.9em;
+		color: #333;
+		border-radius: 50%;
+		box-shadow: inset 0 0 5px 0px #000;
+		background: -webkit-linear-gradient(rgba(253, 193, 104, 1) 0%, rgba(251, 128, 128, 1) 90%);
+		text-decoration: none;
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	.btn_list .little_btn:active {
+		opacity: 0;
+		transition: 0.5s all;
+	}
+
+	body {
+		margin-bottom: 6em;
+	}
+
+	/* Annulation animations */
+
+	.reveal.left {
+		transform: translateX(0);
+		opacity: 1;
+		transition: 3s all;
+	}
+	
+	.reveal.right {
+		transform: translateX(0);
+		opacity: 1;
+		transition: 3s all;
+	}
+	
+	.reveal.appear {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	
+	/* Ajustements */
+
 	.header_name p {
 		display: none;
 	}
 
 	section {
-		padding: 3em 3em;
+		padding: 3em 0;
+		min-height: 85vh;
 	}
 
-	.competences {
+	.h3 {
 		padding: 3em 0;
 	}
 
-	.a_propos {
+	.experiences hr {
+		margin: 0 40px;
+	}
+
+	.a_propos, .etudes {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		height: fit-content;
-		padding: 1em;
+		height: 100%;
+		padding: 3em 2em;
 	}
 
 	.txt_a_propos {
@@ -674,7 +746,7 @@ footer ul {
 	}
 
 	.wallpaper {
-		height: 100vh;
+		min-height: calc(100vh - 6em);
 		display: flex;
 		flex-direction: column;
 	}
@@ -688,12 +760,18 @@ footer ul {
 		font-size: 50px;
 	}
 
-	.wallpaper h2 {
-		display: none;
+	.header_name {
+		padding: 2em 0 0 0;
 	}
 
-	.wallpaper h1 {
-		display: none;
+	h1 {
+		font-size: 2em;
+	}
+
+	h1,
+	h2 {
+		text-align: center;
+		width: 100%;
 	}
 
 	h3 {
@@ -714,16 +792,12 @@ footer ul {
 
 	.competences .tableau_competences .content {
 		grid-template-columns: repeat(2, 1fr);
+		gap: 2em 0;
 	}
 
 	.titre_comp {
 		padding: 10px;
 	}
-
-	.titre_exp {
-		padding: 10px;
-	}
-
 
 	html {
 		width: 100%;
@@ -739,10 +813,6 @@ footer ul {
 
 	article p {
 		font-size: 18px;
-	}
-
-	.navbar {
-		position: absolute;
 	}
 
 	.experiences article img {
@@ -793,7 +863,7 @@ footer ul {
 	}
 
 	.experiences {
-		padding: 0;
+		padding: 3em 0 0 0;
 	}
 
 	.competences .tableau_competences .content .skillsBox img {
