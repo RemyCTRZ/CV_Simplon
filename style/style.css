@@ -350,8 +350,8 @@ aside {
 	display: inline-block;
 	height: 1.3em;
 	aspect-ratio: 1/1;
-	background-color: red;
-	box-shadow: red 0px 0px 8px 0px;
+	background-color: green;
+	box-shadow: green 0px 0px 8px 0px;
 	border-radius: 50%;
 	border: none;
 	-webkit-animation: pulse 1s alternate infinite;
@@ -360,13 +360,13 @@ aside {
 
 @keyframes pulse {
 	0% {
-		background-color: rgba(255, 0, 0, 0.5);
+		background-color: rgba(60, 255, 0, 0.5);
 		box-shadow: none;
 	}
 
 	100% {
-		background-color: red;
-		box-shadow: red 0px 0px 10px 0px;
+		background-color: green;
+		box-shadow: green 0px 0px 10px 0px;
 	}
 }
 
