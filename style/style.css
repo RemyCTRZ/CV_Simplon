@@ -350,8 +350,8 @@ aside {
 	display: inline-block;
 	height: 1.3em;
 	aspect-ratio: 1/1;
-	background-color: green;
-	box-shadow: green 0px 0px 8px 0px;
+	background-color: red;
+	box-shadow: red 0px 0px 8px 0px;
 	border-radius: 50%;
 	border: none;
 	-webkit-animation: pulse 1s alternate infinite;
@@ -360,13 +360,13 @@ aside {
 
 @keyframes pulse {
 	0% {
-		background-color: rgba(60, 255, 0, 0.5);
+		background-color: rgba(255, 0, 0, 0.7);
 		box-shadow: none;
 	}
 
 	100% {
-		background-color: green;
-		box-shadow: green 0px 0px 10px 0px;
+		background-color: red;
+		box-shadow: red 0px 0px 10px 0px;
 	}
 }
 
@@ -684,18 +684,18 @@ footer ul {
 		opacity: 1;
 		transition: 3s all;
 	}
-	
+
 	.reveal.right {
 		transform: translateX(0);
 		opacity: 1;
 		transition: 3s all;
 	}
-	
+
 	.reveal.appear {
 		transform: translateX(0);
 		opacity: 1;
 	}
-	
+
 	/* Ajustements */
 
 	.header_name p {
@@ -715,7 +715,8 @@ footer ul {
 		margin: 0 40px;
 	}
 
-	.a_propos, .etudes {
+	.a_propos,
+	.etudes {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
